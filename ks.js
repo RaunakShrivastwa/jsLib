@@ -31,8 +31,56 @@ class Dom {
         return this;
     }
 
-    // Mouse Events
-    mouseover(callback) {
+    // Click Event
+    dblclick = (callback) => {
+        console.log("this", this.elems);
+        this.elems.forEach(elem => {
+            if (elem) {
+                console.log(elem);
+                elem.addEventListener('dblclick', callback);
+            }
+        });
+        return this;
+    }
+
+    // Click Event
+    mousedown = (callback) => {
+        console.log("this", this.elems);
+        this.elems.forEach(elem => {
+            if (elem) {
+                console.log(elem);
+                elem.addEventListener('mousedown', callback);
+            }
+        });
+        return this;
+    }
+
+    // Click Event
+    mouseup = (callback) => {
+        console.log("this", this.elems);
+        this.elems.forEach(elem => {
+            if (elem) {
+                console.log(elem);
+                elem.addEventListener('mouseup', callback);
+            }
+        });
+        return this;
+    }
+
+    // Click Event
+    mousemove = (callback) => {
+        console.log("this", this.elems);
+        this.elems.forEach(elem => {
+            if (elem) {
+                console.log(elem);
+                elem.addEventListener('mousemove', callback);
+            }
+        });
+        return this;
+    }
+
+    // Click Event
+    mouseover = (callback) => {
         console.log("this", this.elems);
         this.elems.forEach(elem => {
             if (elem) {
@@ -43,316 +91,18 @@ class Dom {
         return this;
     }
 
-    mouseout(callback) {
+    // Click Event
+    mouseover = (callback) => {
+        console.log("this", this.elems);
         this.elems.forEach(elem => {
             if (elem) {
-                elem.addEventListener('mouseout', callback);
+                console.log(elem);
+                elem.addEventListener('mouseover', callback);
             }
         });
         return this;
     }
 
-    mouseenter(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('mouseenter', callback);
-            }
-        });
-        return this;
-    }
-
-    mouseleave(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('mouseleave', callback);
-            }
-        });
-        return this;
-    }
-
-
-    dblclick(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('dblclick', callback);
-            }
-        });
-        return this;
-    }
-
-    mousedown(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('mousedown', callback);
-            }
-        });
-        return this;
-    }
-
-    mouseup(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('mouseup', callback);
-            }
-        });
-        return this;
-    }
-
-    mousemove(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('mousemove', callback);
-            }
-        });
-        return this;
-    }
-
-    // Keyboard Events
-    keydown(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('keydown', callback);
-            }
-        });
-        return this;
-    }
-
-    keyup(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('keyup', callback);
-            }
-        });
-        return this;
-    }
-
-    keypress(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('keypress', callback);
-            }
-        });
-        return this;
-    }
-
-    // Form Events
-    submit(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('submit', callback);
-            }
-        });
-        return this;
-    }
-
-    reset(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('reset', callback);
-            }
-        });
-        return this;
-    }
-
-    change(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('change', callback);
-            }
-        });
-        return this;
-    }
-
-    input(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('input', callback);
-            }
-        });
-        return this;
-    }
-
-    focus(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('focus', callback);
-            }
-        });
-        return this;
-    }
-
-    blur(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('blur', callback);
-            }
-        });
-        return this;
-    }
-
-    // Window Events
-    load(callback) {
-        window.addEventListener('load', callback);
-        return this;
-    }
-
-    resize(callback) {
-        window.addEventListener('resize', callback);
-        return this;
-    }
-
-    scroll(callback) {
-        window.addEventListener('scroll', callback);
-        return this;
-    }
-
-    unload(callback) {
-        window.addEventListener('unload', callback);
-        return this;
-    }
-
-    beforeunload(callback) {
-        window.addEventListener('beforeunload', callback);
-        return this;
-    }
-
-    // Touch Events
-    touchstart(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('touchstart', callback);
-            }
-        });
-        return this;
-    }
-
-    touchend(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('touchend', callback);
-            }
-        });
-        return this;
-    }
-
-    touchmove(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('touchmove', callback);
-            }
-        });
-        return this;
-    }
-
-    touchcancel(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('touchcancel', callback);
-            }
-        });
-        return this;
-    }
-
-    // Pointer Events
-    pointerdown(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('pointerdown', callback);
-            }
-        });
-        return this;
-    }
-
-    pointerup(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('pointerup', callback);
-            }
-        });
-        return this;
-    }
-
-    pointermove(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('pointermove', callback);
-            }
-        });
-        return this;
-    }
-
-    pointercancel(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('pointercancel', callback);
-            }
-        });
-        return this;
-    }
-
-    pointerover(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('pointerover', callback);
-            }
-        });
-        return this;
-    }
-
-    pointerout(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('pointerout', callback);
-            }
-        });
-        return this;
-    }
-
-    // Other Events
-    error(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('error', callback);
-            }
-        });
-        return this;
-    }
-
-    transitionend(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('transitionend', callback);
-            }
-        });
-        return this;
-    }
-
-    animationend(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('animationend', callback);
-            }
-        });
-        return this;
-    }
-
-    drag(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('drag', callback);
-            }
-        });
-        return this;
-    }
-
-    drop(callback) {
-        this.elems.forEach(elem => {
-            if (elem) {
-                elem.addEventListener('drop', callback);
-            }
-        });
-        return this;
-    }
 
 
     // Set width
@@ -398,10 +148,29 @@ class Dom {
 
 }
 
+// Example Usage
+const dom = new Dom();
 
-   
+const btn1 = dom.getE("#btn1");
+btn1.width(400);
+btn1.click(()=>{
+    console.log("btn1");
+})
+
+const btn2 = dom.getE("#btn2");
 
 
+btn2.width(30);
+btn2.height(30);
+btn2.setStyle('background-color:blue')
+btn2.click(()=>{
+    console.log('btn 2');
+})
 
 
+const btn3 = dom.getE("#btn3");
+btn3.setStyle('width:300px; height:200px; color:red');
+btn3.click(()=>{
+    console.log("btn3");
+})
 
