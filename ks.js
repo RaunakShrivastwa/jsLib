@@ -148,30 +148,4 @@ class Dom {
 
 }
 
-// Example Usage
-const dom = new Dom();
-
-
-const btn1 = dom.getE("#div1");
-btn1.width(900);
-btn1.click(()=>{
-   alert('1')
-})
-
-// const btn2 = dom.getE("#btn2");
-
-
-// btn2.width(30);
-// btn2.height(30);
-// btn2.setStyle('background-color:blue')
-// btn2.click(()=>{
-//     console.log('btn 2');
-// })
-
-
-// const btn3 = dom.getE("#btn3");
-// btn3.setStyle('width:300px; height:200px; color:red');
-// btn3.click(()=>{
-//     console.log("btn3");
-// })
 
