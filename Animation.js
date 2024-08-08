@@ -86,26 +86,3 @@ class BubbleAnimation {
         clearInterval(this.intervalId);
     }
 }
-
-const bubbleAnimation = new BubbleAnimation();
-bubbleAnimation.init('#div1', {
-    width: 10,
-    height: 10,
-    bubbleBG: 'white',
-    radius: 50,
-    delay: 100,
-    border: 2,
-    borderColor: 'black',
-    borderStyle: 'dotted',
-    rotate: 360,
-    blast: {
-        width: 10,
-        height: 10,
-        // blastBG: 'black',
-        radius: 50,
-        border: 2,
-        borderColor: 'green',
-        borderStyle: 'solid',
-        opacity:1
-    }
-});
